@@ -11,8 +11,8 @@ export default $config({
   async run() {
     const database = new sst.aws.Postgres("MyDatabase", {
       scaling: {
-        min: "2 ACU",
-        max: "128 ACU",
+        min: "1 ACU",
+        max: "4 ACU",
       },
     });
     new sst.aws.Remix("MyWeb", {
